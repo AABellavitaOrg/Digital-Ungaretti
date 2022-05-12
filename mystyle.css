@@ -1,0 +1,579 @@
+body {
+  position: absolute;
+  position: fixed;
+  background-color: #07090a;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.maintitle {
+  position: absolute;
+  width: 122px;
+  height: 36px;
+  left: 320px;
+  top: 167px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem01ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 269px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem02ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 305px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem03ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 341px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem04ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 377px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem05ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 413px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem06ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 449px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem07ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 485px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem08ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 521px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem09ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 557px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem10ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 593px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem11ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 629px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem12ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 665px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem13ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 701px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem14ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 737px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem15ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 773px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem16ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 809px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+.poem17ita {
+  position: absolute;
+  width: 275px;
+  height: 36px;
+  left: 362px;
+  top: 845px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+.poem01eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 269px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem02eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 305px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem03eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 341px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem04eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 377px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem05eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 413px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem06eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 449px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem07eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 485px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem08eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 521px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem09eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 557px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem10eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 593px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem11eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 629px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem12eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 665px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem13eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 701px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem14eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 737px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem15eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 773px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem16eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 809px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
+
+.poem17eng {
+  position: absolute;
+  width: 275px;
+  height: 612px;
+  left: 710px;
+  top: 845px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #656565;
+}
