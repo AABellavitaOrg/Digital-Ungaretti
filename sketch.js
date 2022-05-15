@@ -46,12 +46,12 @@ let vegliacounter = 0;
 
 function preload(){
   //video Veglia
-  vidVeglia1 = createVideo("assets/videos/Veglia1.mp4");
-  vidVeglia2 = createVideo("assets/videos/Veglia2.mp4");
-  vidVeglia3 = createVideo("assets/videos/Veglia3.mp4");
-  vidVeglia4 = createVideo("assets/videos/Veglia4.mp4");
-  vidVeglia5 = createVideo("assets/videos/Veglia5.mp4");
-  vidVeglia1.position(960, 0);
+  vidVeglia1 = createVideo("assets/videos/veglia/Veglia_1.mp4");
+  vidVeglia2 = createVideo("assets/videos/veglia/Veglia_2.mp4");
+  vidVeglia3 = createVideo("assets/videos/veglia/Veglia_3.mp4");
+  vidVeglia4 = createVideo("assets/videos/veglia/Veglia_4.mp4");
+  vidVeglia5 = createVideo("assets/videos/veglia/Veglia_5.mp4");
+  vidVeglia1.position(1260, 0);
   vidVeglia2.position(960, 0);
   vidVeglia3.position(960, 0);
   vidVeglia4.position(960, 0);
@@ -63,19 +63,27 @@ function preload(){
   vidVeglia5.hide();
 
   myPaper = loadImage("assets/images/myPaper.png");
-  myBackground = loadImage("assets/images/myBackground.jpg");
+  //myBackground = loadImage("assets/images/myBackground.jpg");
+  //image(myBackground, 0, 0, 1920, 1080);
+  //image(myPaper, -35, -97, 1383, 1205);
+
+  //carta = createImg("assets/images/myPaper.png")
+  //carta.position(-1000, -97);
+  //carta.width(1383);
+  //carta.height(1080);
 
 }
 
 function setup() {
   //createCanvas(windowWidth,windowHeight);
   createCanvas(1920,1080);
-  background(0);
+  background('#1b1b1b');
   /*
   image(myBackground, 0, 0, width, height);
   image(myPaper, 0, 0, width-(width/3.5), height);
-  */
+
   image(myBackground, 0, 0, 1920, 1080);
+  */
   image(myPaper, -35, -97, 1383, 1205);
 
   text_ti = createDiv(emptyT);
@@ -323,27 +331,23 @@ function addveglia6() {
 }
 
 function draw() {
-  if (veglia1status == true && vidVeglia1.time()/vidVeglia1.duration() == 1) {
-    addveglia2();
-  }
-  if (veglia2status == true && vidVeglia2.time()/vidVeglia2.duration() == 1) {
-    addveglia3();
-  }
-  if (veglia3status == true && vidVeglia3.time()/vidVeglia3.duration() == 1) {
-    addveglia4();
-  }
-  if (veglia4status == true && vidVeglia4.time()/vidVeglia4.duration() == 1) {
-    addveglia5();
-  }
-  if (veglia5status == true && vidVeglia5.time()/vidVeglia5.duration() == 1) {
-    addveglia6();
-  }
+
 }
 
 function mousePressed() {
   console.log(vidVeglia1.time());
   if (veglia1status == false && vidVeglia1.time()/vidVeglia1.duration() != 1) {
     addveglia1();
+  } else if (veglia1status == true && vidVeglia1.time()/vidVeglia1.duration() == 1) {
+    addveglia2();
+  } else if (veglia2status == true && vidVeglia2.time()/vidVeglia2.duration() == 1) {
+    addveglia3();
+  } else if (veglia3status == true && vidVeglia3.time()/vidVeglia3.duration() == 1) {
+    addveglia4();
+  } else if (veglia4status == true && vidVeglia4.time()/vidVeglia4.duration() == 1) {
+    addveglia5();
+  } else if (veglia5status == true && vidVeglia5.time()/vidVeglia5.duration() == 1) {
+    addveglia6();
   }
 }
 
