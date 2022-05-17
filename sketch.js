@@ -60,25 +60,25 @@ let vegliacounter = 0;
 let fratelliti = "Fratelli"
 let fratelli01ita = "Di che reggimento siete"
 let fratelli02ita = "soldati?"
-let fratelli03ita = "Parola tremante"
-let fratelli04ita = "nella notte"
-let fratelli05ita = "Foglia appena nata"
-let fratelli06ita = "Nell'aria spasimante"
-let fratelli07ita = "involontaria rivolta"
-let fratelli08ita = "dell'uomo presente alla sua"
-let fratelli09ita = "fragilità"
-let fratelli10ita = "Fratelli."
+let fratelli04ita = "Parola tremante"
+let fratelli05ita = "nella notte"
+let fratelli07ita = "Foglia appena nata"
+let fratelli09ita = "Nell'aria spasimante"
+let fratelli10ita = "involontaria rivolta"
+let fratelli11ita = "dell'uomo presente alla sua"
+let fratelli12ita = "fragilità"
+let fratelli14ita = "Fratelli."
 
 let fratelli01eng = "What's your regiment"
 let fratelli02eng = "brothers?"
-let fratelli03eng = "Trembling word"
-let fratelli04eng = "in the nigh"
-let fratelli05eng = "Leaf that is just born"
-let fratelli06eng = "In the spasmodic air"
-let fratelli07eng = "involuntary revolt"
-let fratelli08eng = "of a man present to his"
-let fratelli09eng = "fragility"
-let fratelli10eng = "Brothers."
+let fratelli04eng = "Trembling word"
+let fratelli05eng = "in the nigh"
+let fratelli07eng = "Leaf that is just born"
+let fratelli09eng = "In the spasmodic air"
+let fratelli10eng = "involuntary revolt"
+let fratelli11eng = "of a man present to his"
+let fratelli12eng = "fragility"
+let fratelli14eng = "Brothers."
 
 let fratelli1status = false;
 let fratelli2status = false;
@@ -143,6 +143,7 @@ function preload() {
   vidVeglia4.hide();
   vidVeglia5.hide();
 
+  //vdeo Fratelli
   vidFratelli1 = createVideo("assets/videos/fratelli/fratelli_1.mp4");
   vidFratelli2 = createVideo("assets/videos/fratelli/fratelli_2.mp4");
   vidFratelli3 = createVideo("assets/videos/fratelli/fratelli_3.mp4");
@@ -152,6 +153,20 @@ function preload() {
   vidFratelli1.hide();
   vidFratelli2.hide();
   vidFratelli3.hide();
+
+  //video San Martino del Carso
+  vidSmcarso1 = createVideo("assets/videos/smcarso/Smcarso_1.mp4");
+  vidSmcarso2 = createVideo("assets/videos/smcarso/Smcarso_2.mp4");
+  vidSmcarso3 = createVideo("assets/videos/smcarso/Smcarso_3.mp4");
+  vidSmcarso4 = createVideo("assets/videos/smcarso/Smcarso_4.mp4");
+  vidSmcarso1.position(960, 0);
+  vidSmcarso2.position(960, 0);
+  vidSmcarso3.position(960, 0);
+  vidSmcarso4.position(960, 0);
+  vidSmcarso1.hide();
+  vidSmcarso2.hide();
+  vidSmcarso3.hide();
+  vidSmcarso4.hide();
 
 
   //myPaper = loadImage("assets/images/myPaper.png");
@@ -458,13 +473,13 @@ function addfratelli1() {
     document.getElementById('text_ti').innerHTML = fratelliti;
     document.getElementById('text_01').innerHTML = fratelli01ita;
     document.getElementById('text_02').innerHTML = fratelli02ita;
-    document.getElementById('text_03').innerHTML = fratelli03ita;
     document.getElementById('text_04').innerHTML = fratelli04ita;
+    document.getElementById('text_05').innerHTML = fratelli05ita;
     //
     document.getElementById('text_01e').innerHTML = fratelli01eng;
     document.getElementById('text_02e').innerHTML = fratelli02eng;
-    document.getElementById('text_03e').innerHTML = fratelli03eng;
     document.getElementById('text_04e').innerHTML = fratelli04eng;
+    document.getElementById('text_05e').innerHTML = fratelli05eng;
     //
     //
     vidFratelli1.show();
@@ -475,12 +490,11 @@ function addfratelli1() {
 
 function addfratelli2() {
   if (fratelli2status == false && fratelli == true) {
-    document.getElementById('text_05').innerHTML = fratelli05ita;
-    document.getElementById('text_06').innerHTML = fratelli06ita;
-      //
-    document.getElementById('text_05e').innerHTML = fratelli05eng;
-    document.getElementById('text_06e').innerHTML = fratelli06eng;
+    document.getElementById('text_07').innerHTML = fratelli07ita;
+    document.getElementById('text_09').innerHTML = fratelli09ita;
     //
+    document.getElementById('text_07e').innerHTML = fratelli07eng;
+    document.getElementById('text_09e').innerHTML = fratelli09eng;
     //
     vidFratelli2.show();
     vidFratelli2.play();
@@ -492,16 +506,15 @@ function addfratelli2() {
 
 function addfratelli3() {
   if (fratelli3status == false && fratelli == true) {
-    document.getElementById('text_07').innerHTML = fratelli07ita;
-    document.getElementById('text_08').innerHTML = fratelli08ita;
-    document.getElementById('text_09').innerHTML = fratelli09ita;
     document.getElementById('text_10').innerHTML = fratelli10ita;
+    document.getElementById('text_11').innerHTML = fratelli11ita;
+    document.getElementById('text_12').innerHTML = fratelli12ita;
+    document.getElementById('text_14').innerHTML = fratelli14ita;
     //
-    document.getElementById('text_07e').innerHTML = fratelli07eng;
-    document.getElementById('text_08e').innerHTML = fratelli08eng;
-    document.getElementById('text_09e').innerHTML = fratelli09eng;
     document.getElementById('text_10e').innerHTML = fratelli10eng;
-    //
+    document.getElementById('text_11e').innerHTML = fratelli11eng;
+    document.getElementById('text_12e').innerHTML = fratelli12eng;
+    document.getElementById('text_14e').innerHTML = fratelli14eng;
     //
      vidFratelli3.show();
      vidFratelli3.play();
@@ -514,7 +527,7 @@ function addfratelli3() {
 function addfratelli4() {
   erasePoem();
   fratelli3status = false;
-  vidVeglia3.hide();
+  vidFratelli3.hide();
 }
 
 
@@ -813,6 +826,7 @@ function erasePoem() {
   document.getElementById('text_17e').innerHTML = "";
 
   vidVeglia1.time(0);
+  vidFratelli1.time(0);
   vidSmcarso1.time(0);
 
 }
@@ -820,26 +834,30 @@ function erasePoem() {
 function switchToVeglia() {
   erasePoem();
   veglia = true;
+  veglia1status = false;
+
   if (fratelli == true) {
     fratelli = false;
-    fratelli1status == false;
-    fratelli2status == false;
-    fratelli3status == false;
+    fratelli1status = false;
+    fratelli2status = false;
+    fratelli3status = false;
 
     vidFratelli1.hide();
     vidFratelli2.hide();
     vidFratelli3.hide();
-
-
   }
 
   if (smcarso == true) {
     smcarso = false;
-    // vidVeglia1.hide();
-    // vidVeglia2.hide();
-    // vidVeglia3.hide();
-    // vidVeglia4.hide();
-    // vidVeglia5.hide();
+    smcarso1status = false;
+    smcarso2status = false;
+    smcarso3status = false;
+    smcarso4status = false;
+
+    vidSmcarso1.hide();
+    vidSmcarso2.hide();
+    vidSmcarso3.hide();
+    vidSmcarso4.hide();
   }
 
   if (soldati == true) {
@@ -851,8 +869,6 @@ function switchToVeglia() {
     // vidVeglia5.hide();
   }
   addveglia1();
-
-
 }
 
 
@@ -879,11 +895,14 @@ function switchToFratelli() {
   if (smcarso == true) {
     smcarso = false;
     smcarso1status = false;
-    // vidVeglia1.hide();
-    // vidVeglia2.hide();
-    // vidVeglia3.hide();
-    // vidVeglia4.hide();
-    // vidVeglia5.hide();
+    smcarso2status = false;
+    smcarso3status = false;
+    smcarso4status = false;
+
+    vidSmcarso1.hide();
+    vidSmcarso2.hide();
+    vidSmcarso3.hide();
+    vidSmcarso4.hide();
   }
 
   if (soldati == true) {
@@ -978,13 +997,15 @@ function switchToSoldati() {
   if (smcarso == true) {
     smcarso = false;
     smcarso1status = false;
-    // vidVeglia1.hide();
-    // vidVeglia2.hide();
-    // vidVeglia3.hide();
-    // vidVeglia4.hide();
-    // vidVeglia5.hide();
-  }
+    smcarso2status = false;
+    smcarso3status = false;
+    smcarso4status = false;
 
+    vidSmcarso1.hide();
+    vidSmcarso2.hide();
+    vidSmcarso3.hide();
+    vidSmcarso4.hide();
+  }
   addsoldati1();
 }
 
