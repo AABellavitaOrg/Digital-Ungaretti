@@ -564,7 +564,7 @@ body {
 
 .poem15eng {
   position: absolute;
-  width: 275px;
+  width: 400px;
   height: 612px;
   left: 710px;
   top: 773px;
@@ -630,18 +630,46 @@ body {
   color: #000000;
 }
 
-.data2 {
+.data1 {
   position: absolute;
-  width: 151px;
+  width: 173px;
   height: 20px;
-  left: 127px;
-  top: 407px;
+  left: 105px;
+  top: 276px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
+
+  text-align: right;
+  padding: 0px;
+  background:none;
+  border:none;
+
+  color: #000000;
+}
+
+.data2 {
+  position: absolute;
+  width: 151px;
+  height: 20px;
+  left: 127px;
+  top: 409px;
+  z-index: 12;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-align: right;
+  padding: 0px;
+  background:none;
+  border:none;
 
   color: #656565;
 }
@@ -651,13 +679,19 @@ body {
   width: 148px;
   height: 20px;
   left: 130px;
-  top: 544px;
+  top: 546px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
+
+  text-align: right;
+  padding: 0px;
+  background:none;
+  border:none;
 
   color: #656565;
 }
@@ -667,7 +701,8 @@ body {
   width: 152px;
   height: 20px;
   left: 126px;
-  top: 681px;
+  top: 683px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -675,5 +710,10 @@ body {
   font-size: 20px;
   line-height: 20px;
 
-  color: #656565;  
+  text-align: right;
+  padding: 0px;
+  background:none;
+  border:none;
+
+  color: #656565;
 }

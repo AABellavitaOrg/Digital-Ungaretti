@@ -87,15 +87,42 @@ let fratelli3status = false;
 
 //San Martino del Carso
 let smcarsoti = "San Martino del Carso"
-let smcarso01ita = "Di che reggimento siete"
+let smcarso01ita = "Di queste case";
+let smcarso02ita = "non è rimasto"
+let smcarso03ita = "che qualche"
+let smcarso04ita = "brandello di muro"
+let smcarso06ita = "Di tanti"
+let smcarso07ita = "che im corrispondevano"
+let smcarso08ita = "non è rimasto"
+let smcarso09ita = "neppure tanto"
+let smcarso11ita = "Ma nel cuore"
+let smcarso12ita = "nessuna croce manca"
+let smcarso14ita = "È il mio cuore"
+let smcarso15ita = "il paese più straziato"
+
+let smcarso01eng = "Of these houses";
+let smcarso02eng = "there is nothing left"
+let smcarso03eng = "except for some"
+let smcarso04eng = "shred of walls"
+let smcarso06eng = "Of the many people"
+let smcarso07eng = "who loved me back"
+let smcarso08eng = "not even that"
+let smcarso09eng = "has remained"
+let smcarso11eng = "But in my heart"
+let smcarso12eng = "no cross is missing"
+let smcarso14eng = "It's my heart"
+let smcarso15eng = "the most shuttered village"
+
 let smcarso1status = false;
+let smcarso2status = false;
+let smcarso3status = false;
+let smcarso4status = false;
 
 
 //soldati
 let soldatiti = "Soldati"
 let soldati01ita = "Di che reggimento siete"
 let soldati1status = false;
-
 
 
 function preload() {
@@ -136,13 +163,6 @@ function setup() {
   //createCanvas(windowWidth,windowHeight);
   createCanvas(1920, 1080);
   background('#1b1b1b');
-  /*
-  image(myBackground, 0, 0, width, height);
-  image(myPaper, 0, 0, width-(width/3.5), height);
-
-  image(myPaper, -35, -97, 1383, 1205);
-  image(myBackground, 0, 0, 1920, 1080);
-  */
 
   carta = createImg("assets/images/myPaper.png");
   carta.position(-33, -91);
@@ -302,37 +322,34 @@ function setup() {
   text_17e.id("text_17e");
   text_17e.class("poem17eng");
 
-  // data1 = createDiv(emptyT);
-  // data1.id("data1");
-  // data1.class("data1");
+  data1 = createButton("23 Dicembre 1915")
+  data1.class("data1")
+
+  data2 = createButton("15 Luglio 1916");
+  data2.class("data2");
+
+  data3 = createButton("27 Agosto 1916");
+  data3.class("data3");
+
+  data4 = createButton("13 Luglio 1918");
+  data4.class("data4");
 
   button_veglia = createButton("")
-  button_veglia.position(310, 273);
-  button_veglia.style('background-color', '#000000');
-  button_veglia.style('padding', '7px');
   button_veglia.style('border-radius', '50%');
   button_veglia.style('z-index', 12);
 
   button_fratelli = createButton("")
-  button_fratelli.position(310, 407);
-  button_fratelli.style('background-color', '#000000');
-  button_fratelli.style('padding', '7px');
   button_fratelli.style('border-radius', '50%');
   button_fratelli.style('z-index', 12);
 
   button_smcarso = createButton("")
-  button_smcarso.position(310, 544);
-  button_smcarso.style('background-color', '#000000');
-  button_smcarso.style('padding', '7px');
   button_smcarso.style('border-radius', '50%');
   button_smcarso.style('z-index', 12);
 
   button_soldati = createButton("")
-  button_soldati.position(310, 681);
-  button_soldati.style('background-color', '#000000');
-  button_soldati.style('padding', '7px');
   button_soldati.style('border-radius', '50%')
   button_soldati.style('z-index', 12);
+
 }
 
 /////aggiunta condizione veglia == true
@@ -508,18 +525,79 @@ function addsmcarso1() {
   if (smcarso1status == false && smcarso == true) {
     document.getElementById('text_ti').innerHTML = smcarsoti;
     document.getElementById('text_01').innerHTML = smcarso01ita;
-    // document.getElementById('text_02').innerHTML = veglia02ita;
-    // document.getElementById('text_03').innerHTML = veglia03ita;
+    document.getElementById('text_02').innerHTML = smcarso02ita;
+    document.getElementById('text_03').innerHTML = smcarso03ita;
+    document.getElementById('text_04').innerHTML = smcarso04ita;
     //
-    // document.getElementById('text_01e').innerHTML = veglia01eng;
-    // document.getElementById('text_02e').innerHTML = veglia02eng;
-    // document.getElementById('text_03e').innerHTML = veglia03eng;
+    document.getElementById('text_01e').innerHTML = smcarso01eng;
+    document.getElementById('text_02e').innerHTML = smcarso02eng;
+    document.getElementById('text_03e').innerHTML = smcarso03eng;
+    document.getElementById('text_04e').innerHTML = smcarso04eng;
     //
-    // vidVeglia1.show();
-    // vidVeglia1.play();
+    vidSmcarso1.show();
+    vidSmcarso1.play();
     smcarso1status = true;
-
   }
+}
+
+function addsmcarso2() {
+  if (smcarso2status == false && smcarso == true) {
+    document.getElementById('text_06').innerHTML = smcarso06ita;
+    document.getElementById('text_07').innerHTML = smcarso07ita;
+    document.getElementById('text_08').innerHTML = smcarso08ita;
+    document.getElementById('text_09').innerHTML = smcarso09ita;
+
+    document.getElementById('text_06e').innerHTML = smcarso06eng;
+    document.getElementById('text_07e').innerHTML = smcarso07eng;
+    document.getElementById('text_08e').innerHTML = smcarso08eng;
+    document.getElementById('text_09e').innerHTML = smcarso09eng;
+
+    vidSmcarso1.hide();
+    vidSmcarso2.show();
+    vidSmcarso2.play();
+
+    smcarso1status = false;
+    smcarso2status = true;
+  }
+}
+
+function addsmcarso3() {
+  if (smcarso3status == false && smcarso == true) {
+    document.getElementById('text_11').innerHTML = smcarso11ita;
+    document.getElementById('text_12').innerHTML = smcarso12ita;
+
+    document.getElementById('text_11e').innerHTML = smcarso11eng;
+    document.getElementById('text_12e').innerHTML = smcarso12eng;
+
+    vidSmcarso2.hide();
+    vidSmcarso3.show();
+    vidSmcarso3.play();
+
+    smcarso2status = false;
+    smcarso3status = true;
+  }
+}
+
+function addsmcarso4() {
+  if (smcarso4status == false && smcarso == true) {
+    document.getElementById('text_14').innerHTML = smcarso14ita;
+    document.getElementById('text_15').innerHTML = smcarso15ita;
+
+    document.getElementById('text_14e').innerHTML = smcarso14eng;
+    document.getElementById('text_15e').innerHTML = smcarso15eng;
+
+    vidSmcarso3.hide();
+    vidSmcarso4.show();
+    vidSmcarso4.play();
+    smcarso3status = false;
+    smcarso4status = true;
+  }
+}
+
+function addsmcarso5() {
+  erasePoem();
+  smcarso4status = false;
+  vidSmcarso4.hide();
 }
 
 /////////////////ADD SOLDATI//////
@@ -545,72 +623,91 @@ function addsoldati1() {
 function draw() {
   if (veglia == false) {
     button_veglia.mousePressed(switchToVeglia);
+    data1.mousePressed(switchToVeglia);
   }
   if (veglia == true) {
     button_veglia.style('background-color', '#FFFFFF');
     button_veglia.style('padding', '10px');
     button_veglia.position(310-3, 273-3);
 
-    button_smcarso.style('background-color', '#000000');
-    button_smcarso.style('padding', '7px');
-    button_smcarso.position(310, 544);
-
     button_fratelli.style('background-color', '#000000');
     button_fratelli.style('padding', '7px');
     button_fratelli.position(310, 407);
 
+    button_smcarso.style('background-color', '#000000');
+    button_smcarso.style('padding', '7px');
+    button_smcarso.position(310, 544);
+
     button_soldati.style('background-color', '#000000');
     button_soldati.style('padding', '7px');
     button_soldati.position(310, 681);
+
+    data1.style('color', '#000000');
+    data2.style('color', '#656565');
+    data3.style('color', '#656565');
+    data4.style('color', '#656565');
   }
 
 
   if (fratelli == false) {
     button_fratelli.mousePressed(switchToFratelli);
+    data2.mousePressed(switchToFratelli);
   }
   if (fratelli == true) {
     button_veglia.style('background-color', '#000000');
     button_veglia.style('padding', '7px');
     button_veglia.position(310, 273);
 
-    button_smcarso.style('background-color', '#000000');
-    button_smcarso.style('padding', '7px');
-    button_smcarso.position(310, 544);
-
     button_fratelli.style('background-color', '#FFFFFF');
     button_fratelli.style('padding', '10px');
     button_fratelli.position(310-3, 407-3);
 
+    button_smcarso.style('background-color', '#000000');
+    button_smcarso.style('padding', '7px');
+    button_smcarso.position(310, 544);
+
     button_soldati.style('background-color', '#000000');
     button_soldati.style('padding', '7px');
     button_soldati.position(310, 681);
+
+    data1.style('color', '#656565');
+    data2.style('color', '#000000');
+    data3.style('color', '#656565');
+    data4.style('color', '#656565');
   }
 
 
   if (smcarso == false) {
     button_smcarso.mousePressed(switchToSmcarso);
+    data3.mousePressed(switchToSmcarso);
   }
   if (smcarso == true) {
     button_veglia.style('background-color', '#000000');
     button_veglia.style('padding', '7px');
     button_veglia.position(310, 273);
 
-    button_smcarso.style('background-color', '#FFFFFF');
-    button_smcarso.style('padding', '10px');
-    button_smcarso.position(310-3, 544-3);
-
     button_fratelli.style('background-color', '#000000');
     button_fratelli.style('padding', '7px');
     button_fratelli.position(310, 407);
 
+    button_smcarso.style('background-color', '#FFFFFF');
+    button_smcarso.style('padding', '10px');
+    button_smcarso.position(310-3, 544-3);
+
     button_soldati.style('background-color', '#000000');
     button_soldati.style('padding', '7px');
     button_soldati.position(310, 681);
+
+    data1.style('color', '#656565');
+    data2.style('color', '#656565');
+    data3.style('color', '#000000');
+    data4.style('color', '#656565');
   }
 
 
   if (soldati == false) {
     button_soldati.mousePressed(switchToSoldati);
+    data4.mousePressed(switchToSoldati);
   }
   if (soldati == true) {
     button_veglia.style('background-color', '#000000');
@@ -628,10 +725,16 @@ function draw() {
     button_soldati.style('background-color', '#ffffff');
     button_soldati.style('padding', '10px');
     button_soldati.position(310-3, 681-3);
+
+    data1.style('color', '#656565');
+    data2.style('color', '#656565');
+    data3.style('color', '#656565');
+    data4.style('color', '#000000');
   }
 }
 
 function mousePressed() {
+  //veglia
   if (veglia1status == false && vidVeglia1.time() / vidVeglia1.duration() != 1) {
     addveglia1();
   } else if (veglia1status == true && vidVeglia1.time() / vidVeglia1.duration() == 1) {
@@ -646,6 +749,7 @@ function mousePressed() {
     addveglia6();
   }
 
+  //fratelli
   if (fratelli1status == false && vidFratelli1.time() / vidFratelli1.duration() != 1) {
     addfratelli1();
   } else if (fratelli1status == true && vidFratelli1.time() / vidFratelli1.duration() == 1) {
@@ -654,8 +758,20 @@ function mousePressed() {
     addfratelli3();
   } else if (fratelli3status == true && vidFratelli3.time() / vidFratelli3.duration() == 1) {
     addfratelli4();
+  }
 
-}
+  //san martino del carso
+  if (smcarso1status == false && vidSmcarso1.time() / vidSmcarso1.duration() != 1) {
+    addsmcarso1();
+  } else if (smcarso1status == true && vidSmcarso1.time() / vidSmcarso1.duration() == 1) {
+    addsmcarso2();
+  } else if (smcarso2status == true && vidSmcarso2.time() / vidSmcarso2.duration() == 1) {
+    addsmcarso3();
+  } else if (smcarso3status == true && vidSmcarso3.time() / vidSmcarso3.duration() == 1) {
+    addsmcarso4();
+  } else if (smcarso4status == true && vidSmcarso4.time() / vidSmcarso4.duration() == 1) {
+    addsmcarso5();
+  }
 }
 
 function erasePoem() {
@@ -697,16 +813,8 @@ function erasePoem() {
   document.getElementById('text_17e').innerHTML = "";
 
   vidVeglia1.time(0);
-  /*
-  vidVeglia1.play();
-  vidVeglia1.pause();
+  vidSmcarso1.time(0);
 
-  vidVeglia1.currentTime = 0;
-  vidVeglia2.currentTime = 0;
-  vidVeglia3.currentTime = 0;
-  vidVeglia4.currentTime = 0;
-  vidVeglia5.currentTime = 0;
-  */
 }
 
 function switchToVeglia() {
@@ -878,4 +986,8 @@ function switchToSoldati() {
   }
 
   addsoldati1();
+}
+
+function setLineDash(list) {
+  drawingContext.setLineDash(list);
 }
