@@ -59,7 +59,30 @@ let vegliacounter = 0;
 //fratelli
 let fratelliti = "Fratelli"
 let fratelli01ita = "Di che reggimento siete"
+let fratelli02ita = "soldati?"
+let fratelli03ita = "Parola tremante"
+let fratelli04ita = "nella notte"
+let fratelli05ita = "Foglia appena nata"
+let fratelli06ita = "Nell'aria spasimante"
+let fratelli07ita = "involontaria rivolta"
+let fratelli08ita = "dell'uomo presente alla sua"
+let fratelli09ita = "fragilità"
+let fratelli10ita = "Fratelli."
+
+let fratelli01eng = "What's your regiment"
+let fratelli02eng = "brothers?"
+let fratelli03eng = "Trembling word"
+let fratelli04eng = "in the nigh"
+let fratelli05eng = "Leaf that is just born"
+let fratelli06eng = "In the spasmodic air"
+let fratelli07eng = "involuntary revolt"
+let fratelli08eng = "of a man present to his"
+let fratelli09eng = "fragility"
+let fratelli10eng = "Brothers."
+
 let fratelli1status = false;
+let fratelli2status = false;
+let fratelli3status = false;
 
 
 //San Martino del Carso
@@ -92,6 +115,17 @@ function preload() {
   vidVeglia3.hide();
   vidVeglia4.hide();
   vidVeglia5.hide();
+
+  vidFratelli1 = createVideo("assets/videos/fratelli/fratelli_1.mp4");
+  vidFratelli2 = createVideo("assets/videos/fratelli/fratelli_2.mp4");
+  vidFratelli3 = createVideo("assets/videos/fratelli/fratelli_3.mp4");
+  vidFratelli1.position(960, 0);
+  vidFratelli2.position(960, 0);
+  vidFratelli3.position(960, 0);
+  vidFratelli1.hide();
+  vidFratelli2.hide();
+  vidFratelli3.hide();
+
 
   //myPaper = loadImage("assets/images/myPaper.png");
   //myBackground = loadImage("assets/images/myBackgroundHole.png");
@@ -406,19 +440,67 @@ function addfratelli1() {
   if (fratelli1status == false && fratelli == true) {
     document.getElementById('text_ti').innerHTML = fratelliti;
     document.getElementById('text_01').innerHTML = fratelli01ita;
-    // document.getElementById('text_02').innerHTML = veglia02ita;
-    // document.getElementById('text_03').innerHTML = veglia03ita;
+    document.getElementById('text_02').innerHTML = fratelli02ita;
+    document.getElementById('text_03').innerHTML = fratelli03ita;
+    document.getElementById('text_04').innerHTML = fratelli04ita;
     //
-    // document.getElementById('text_01e').innerHTML = veglia01eng;
-    // document.getElementById('text_02e').innerHTML = veglia02eng;
-    // document.getElementById('text_03e').innerHTML = veglia03eng;
+    document.getElementById('text_01e').innerHTML = fratelli01eng;
+    document.getElementById('text_02e').innerHTML = fratelli02eng;
+    document.getElementById('text_03e').innerHTML = fratelli03eng;
+    document.getElementById('text_04e').innerHTML = fratelli04eng;
     //
-    // vidVeglia1.show();
-    // vidVeglia1.play();
+    //
+    vidFratelli1.show();
+    vidFratelli1.play();
     fratelli1status = true;
-
   }
 }
+
+function addfratelli2() {
+  if (fratelli2status == false && fratelli == true) {
+    document.getElementById('text_05').innerHTML = fratelli05ita;
+    document.getElementById('text_06').innerHTML = fratelli06ita;
+      //
+    document.getElementById('text_05e').innerHTML = fratelli05eng;
+    document.getElementById('text_06e').innerHTML = fratelli06eng;
+    //
+    //
+    vidFratelli2.show();
+    vidFratelli2.play();
+    vidFratelli1.hide();
+    fratelli2status = true;
+    fratelli1status = false;
+  }
+}
+
+function addfratelli3() {
+  if (fratelli3status == false && fratelli == true) {
+    document.getElementById('text_07').innerHTML = fratelli07ita;
+    document.getElementById('text_08').innerHTML = fratelli08ita;
+    document.getElementById('text_09').innerHTML = fratelli09ita;
+    document.getElementById('text_10').innerHTML = fratelli10ita;
+    //
+    document.getElementById('text_07e').innerHTML = fratelli07eng;
+    document.getElementById('text_08e').innerHTML = fratelli08eng;
+    document.getElementById('text_09e').innerHTML = fratelli09eng;
+    document.getElementById('text_10e').innerHTML = fratelli10eng;
+    //
+    //
+     vidFratelli3.show();
+     vidFratelli3.play();
+     vidFratelli2.hide();
+    fratelli3status = true;
+    fratelli2status = false;
+  }
+}
+
+function addfratelli4() {
+  erasePoem();
+  fratelli3status = false;
+  vidVeglia3.hide();
+}
+
+
 
 /////////////////ADD SAN MARTINO DEL CARSO//////
 
@@ -563,6 +645,17 @@ function mousePressed() {
   } else if (veglia5status == true && vidVeglia5.time() / vidVeglia5.duration() == 1) {
     addveglia6();
   }
+
+  if (fratelli1status == false && vidFratelli1.time() / vidFratelli1.duration() != 1) {
+    addfratelli1();
+  } else if (fratelli1status == true && vidFratelli1.time() / vidFratelli1.duration() == 1) {
+    addfratelli2();
+  } else if (fratelli2status == true && vidFratelli2.time() / vidFratelli2.duration() == 1) {
+    addfratelli3();
+  } else if (fratelli3status == true && vidFratelli3.time() / vidFratelli3.duration() == 1) {
+    addfratelli4();
+
+}
 }
 
 function erasePoem() {
@@ -621,11 +714,15 @@ function switchToVeglia() {
   veglia = true;
   if (fratelli == true) {
     fratelli = false;
-    // vidVeglia1.hide();
-    // vidVeglia2.hide();
-    // vidVeglia3.hide();
-    // vidVeglia4.hide();
-    // vidVeglia5.hide();
+    fratelli1status == false;
+    fratelli2status == false;
+    fratelli3status == false;
+
+    vidFratelli1.hide();
+    vidFratelli2.hide();
+    vidFratelli3.hide();
+
+
   }
 
   if (smcarso == true) {
@@ -717,12 +814,13 @@ function switchToSmcarso() {
 
   if (fratelli == true) {
     fratelli = false;
-    fratelli1status = false;
-    // vidVeglia1.hide();
-    // vidVeglia2.hide();
-    // vidVeglia3.hide();
-    // vidVeglia4.hide();
-    // vidVeglia5.hide();
+    fratelli1status == false;
+    fratelli2status == false;
+    fratelli3status == false;
+
+    vidFratelli1.hide();
+    vidFratelli2.hide();
+    vidFratelli3.hide();
   }
 
   if (soldati == true) {
@@ -760,12 +858,13 @@ function switchToSoldati() {
 
   if (fratelli == true) {
     fratelli = false;
-    fratelli1status = false;
-    // vidVeglia1.hide();
-    // vidVeglia2.hide();
-    // vidVeglia3.hide();
-    // vidVeglia4.hide();
-    // vidVeglia5.hide();
+    fratelli1status == false;
+    fratelli2status == false;
+    fratelli3status == false;
+
+    vidFratelli1.hide();
+    vidFratelli2.hide();
+    vidFratelli3.hide();
   }
 
   if (smcarso == true) {
@@ -777,5 +876,6 @@ function switchToSoldati() {
     // vidVeglia4.hide();
     // vidVeglia5.hide();
   }
+
   addsoldati1();
 }
