@@ -11,9 +11,9 @@ body {
 
 .maintitle {
   position: absolute;
-  width: 300px;
+  width: 500px;
   height: 36px;
-  left: 320px;
+  left: 360px;
   top: 167px;
   z-index: 12;
 
@@ -611,4 +611,69 @@ body {
   line-height: 36px;
 
   color: #656565;
+}
+
+.data1 {
+  position: absolute;
+  width: 173px;
+  height: 20px;
+  left: 105px;
+  top: 276px;
+  z-index: 12;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #000000;
+}
+
+.data2 {
+  position: absolute;
+  width: 151px;
+  height: 20px;
+  left: 127px;
+  top: 407px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #656565;
+}
+
+.data3 {
+  position: absolute;
+  width: 148px;
+  height: 20px;
+  left: 130px;
+  top: 544px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #656565;
+}
+
+.data4 {
+  position: absolute;
+  width: 152px;
+  height: 20px;
+  left: 126px;
+  top: 681px;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #656565;  
 }

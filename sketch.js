@@ -8,6 +8,9 @@ let smcarso = false;
 let soldati = false;
 
 let button_veglia;
+let button_smcarso;
+let button_soldati;
+let button_fratelli;
 
 //Veglia
 let vegliati = "Veglia";
@@ -264,6 +267,38 @@ function setup() {
   text_17e = createDiv(emptyT);
   text_17e.id("text_17e");
   text_17e.class("poem17eng");
+
+  // data1 = createDiv(emptyT);
+  // data1.id("data1");
+  // data1.class("data1");
+
+  button_veglia = createButton("")
+  button_veglia.position(310, 273);
+  button_veglia.style('background-color', '#000000');
+  button_veglia.style('padding', '7px');
+  button_veglia.style('border-radius', '50%');
+  button_veglia.style('z-index', 12);
+
+  button_fratelli = createButton("")
+  button_fratelli.position(310, 407);
+  button_fratelli.style('background-color', '#000000');
+  button_fratelli.style('padding', '7px');
+  button_fratelli.style('border-radius', '50%');
+  button_fratelli.style('z-index', 12);
+
+  button_smcarso = createButton("")
+  button_smcarso.position(310, 544);
+  button_smcarso.style('background-color', '#000000');
+  button_smcarso.style('padding', '7px');
+  button_smcarso.style('border-radius', '50%');
+  button_smcarso.style('z-index', 12);
+
+  button_soldati = createButton("")
+  button_soldati.position(310, 681);
+  button_soldati.style('background-color', '#000000');
+  button_soldati.style('padding', '7px');
+  button_soldati.style('border-radius', '50%')
+  button_soldati.style('z-index', 12);
 }
 
 /////aggiunta condizione veglia == true
@@ -426,64 +461,95 @@ function addsoldati1() {
 }
 
 function draw() {
-  button_veglia = createButton("")
-  button_veglia.position(100, 100);
-  button_veglia.style('background-color', '#FFFFFF');
-  button_veglia.style('padding', '10px');
-  button_veglia.style('border', '2px solid #000000')
-  button_veglia.style('border-radius', '50%')
   if (veglia == false) {
     button_veglia.mousePressed(switchToVeglia);
   }
   if (veglia == true) {
-    button_veglia.style('border', '2px solid #FFFFFF')
+    button_veglia.style('background-color', '#FFFFFF');
+    button_veglia.style('padding', '10px');
+    button_veglia.position(310-3, 273-3);
+
+    button_smcarso.style('background-color', '#000000');
+    button_smcarso.style('padding', '7px');
+    button_smcarso.position(310, 544);
+
+    button_fratelli.style('background-color', '#000000');
+    button_fratelli.style('padding', '7px');
+    button_fratelli.position(310, 407);
+
+    button_soldati.style('background-color', '#000000');
+    button_soldati.style('padding', '7px');
+    button_soldati.position(310, 681);
   }
 
 
-  let button_fratelli = createButton("")
-  button_fratelli.position(100, 130);
-  button_fratelli.style('background-color', '#FFFFFF');
-  button_fratelli.style('padding', '10px');
-  button_fratelli.style('border-radius', '50%')
   if (fratelli == false) {
     button_fratelli.mousePressed(switchToFratelli);
   }
   if (fratelli == true) {
-    button_fratelli.style('border', '2px solid #FFFFFF')
+    button_veglia.style('background-color', '#000000');
+    button_veglia.style('padding', '7px');
+    button_veglia.position(310, 273);
+
+    button_smcarso.style('background-color', '#000000');
+    button_smcarso.style('padding', '7px');
+    button_smcarso.position(310, 544);
+
+    button_fratelli.style('background-color', '#FFFFFF');
+    button_fratelli.style('padding', '10px');
+    button_fratelli.position(310-3, 407-3);
+
+    button_soldati.style('background-color', '#000000');
+    button_soldati.style('padding', '7px');
+    button_soldati.position(310, 681);
   }
 
 
-
-
-  let button_smcarso = createButton("")
-  button_smcarso.position(100, 160);
-  button_smcarso.style('background-color', '#FFFFFF');
-  button_smcarso.style('padding', '10px');
-  button_smcarso.style('border-radius', '50%')
   if (smcarso == false) {
     button_smcarso.mousePressed(switchToSmcarso);
   }
   if (smcarso == true) {
-    button_smcarso.style('border', '2px solid #FFFFFF')
+    button_veglia.style('background-color', '#000000');
+    button_veglia.style('padding', '7px');
+    button_veglia.position(310, 273);
+
+    button_smcarso.style('background-color', '#FFFFFF');
+    button_smcarso.style('padding', '10px');
+    button_smcarso.position(310-3, 544-3);
+
+    button_fratelli.style('background-color', '#000000');
+    button_fratelli.style('padding', '7px');
+    button_fratelli.position(310, 407);
+
+    button_soldati.style('background-color', '#000000');
+    button_soldati.style('padding', '7px');
+    button_soldati.position(310, 681);
   }
 
-  let button_soldati = createButton("")
-  button_soldati.position(100, 190);
-  button_soldati.style('background-color', '#FFFFFF');
-  button_soldati.style('padding', '10px');
-  button_soldati.style('border-radius', '50%')
+
   if (soldati == false) {
     button_soldati.mousePressed(switchToSoldati);
   }
   if (soldati == true) {
-    button_soldati.style('border', '2px solid #FFFFFF')
+    button_veglia.style('background-color', '#000000');
+    button_veglia.style('padding', '7px');
+    button_veglia.position(310, 273);
+
+    button_smcarso.style('background-color', '#000000');
+    button_smcarso.style('padding', '7px');
+    button_smcarso.position(310, 544);
+
+    button_fratelli.style('background-color', '#000000');
+    button_fratelli.style('padding', '7px');
+    button_fratelli.position(310, 407);
+
+    button_soldati.style('background-color', '#ffffff');
+    button_soldati.style('padding', '10px');
+    button_soldati.position(310-3, 681-3);
   }
-
-
 }
 
 function mousePressed() {
-  console.log(vidVeglia1.time());
   if (veglia1status == false && vidVeglia1.time() / vidVeglia1.duration() != 1) {
     addveglia1();
   } else if (veglia1status == true && vidVeglia1.time() / vidVeglia1.duration() == 1) {
@@ -553,7 +619,6 @@ function erasePoem() {
 function switchToVeglia() {
   erasePoem();
   veglia = true;
-
   if (fratelli == true) {
     fratelli = false;
     // vidVeglia1.hide();
@@ -589,6 +654,7 @@ function switchToVeglia() {
 function switchToFratelli() {
   erasePoem();
   fratelli = true;
+  fratelli1status = false;
 
   if (veglia == true) {
     veglia = false;
@@ -607,6 +673,7 @@ function switchToFratelli() {
 
   if (smcarso == true) {
     smcarso = false;
+    smcarso1status = false;
     // vidVeglia1.hide();
     // vidVeglia2.hide();
     // vidVeglia3.hide();
@@ -616,6 +683,7 @@ function switchToFratelli() {
 
   if (soldati == true) {
     soldati = false;
+    soldati1status = false;
     // vidVeglia1.hide();
     // vidVeglia2.hide();
     // vidVeglia3.hide();
@@ -630,6 +698,7 @@ function switchToFratelli() {
 function switchToSmcarso() {
   erasePoem();
   smcarso = true;
+  smcarso1status = false;
 
   if (veglia == true) {
     veglia = false;
@@ -648,6 +717,7 @@ function switchToSmcarso() {
 
   if (fratelli == true) {
     fratelli = false;
+    fratelli1status = false;
     // vidVeglia1.hide();
     // vidVeglia2.hide();
     // vidVeglia3.hide();
@@ -657,6 +727,7 @@ function switchToSmcarso() {
 
   if (soldati == true) {
     soldati = false;
+    soldati1status = false;
     // vidVeglia1.hide();
     // vidVeglia2.hide();
     // vidVeglia3.hide();
@@ -670,6 +741,7 @@ function switchToSmcarso() {
 function switchToSoldati() {
   erasePoem();
   soldati = true;
+  soldati1status = false;
 
   if (veglia == true) {
     veglia = false;
@@ -688,6 +760,7 @@ function switchToSoldati() {
 
   if (fratelli == true) {
     fratelli = false;
+    fratelli1status = false;
     // vidVeglia1.hide();
     // vidVeglia2.hide();
     // vidVeglia3.hide();
@@ -697,6 +770,7 @@ function switchToSoldati() {
 
   if (smcarso == true) {
     smcarso = false;
+    smcarso1status = false;
     // vidVeglia1.hide();
     // vidVeglia2.hide();
     // vidVeglia3.hide();
