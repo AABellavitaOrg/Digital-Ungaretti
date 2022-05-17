@@ -11,10 +11,11 @@ body {
 
 .maintitle {
   position: absolute;
-  width: 122px;
+  width: 300px;
   height: 36px;
   left: 320px;
   top: 167px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -31,6 +32,7 @@ body {
   height: 36px;
   left: 362px;
   top: 269px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -47,6 +49,7 @@ body {
   height: 36px;
   left: 362px;
   top: 305px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -63,6 +66,7 @@ body {
   height: 36px;
   left: 362px;
   top: 341px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -79,6 +83,7 @@ body {
   height: 36px;
   left: 362px;
   top: 377px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -95,6 +100,7 @@ body {
   height: 36px;
   left: 362px;
   top: 413px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -111,6 +117,7 @@ body {
   height: 36px;
   left: 362px;
   top: 449px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -127,6 +134,7 @@ body {
   height: 36px;
   left: 362px;
   top: 485px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -143,6 +151,7 @@ body {
   height: 36px;
   left: 362px;
   top: 521px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -159,6 +168,7 @@ body {
   height: 36px;
   left: 362px;
   top: 557px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -175,6 +185,7 @@ body {
   height: 36px;
   left: 362px;
   top: 593px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -191,6 +202,7 @@ body {
   height: 36px;
   left: 362px;
   top: 629px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -207,6 +219,7 @@ body {
   height: 36px;
   left: 362px;
   top: 665px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -223,6 +236,7 @@ body {
   height: 36px;
   left: 362px;
   top: 701px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -239,6 +253,7 @@ body {
   height: 36px;
   left: 362px;
   top: 737px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -255,6 +270,7 @@ body {
   height: 36px;
   left: 362px;
   top: 773px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -271,6 +287,7 @@ body {
   height: 36px;
   left: 362px;
   top: 809px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -287,6 +304,7 @@ body {
   height: 36px;
   left: 362px;
   top: 845px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -312,6 +330,7 @@ body {
   height: 612px;
   left: 710px;
   top: 269px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -328,6 +347,7 @@ body {
   height: 612px;
   left: 710px;
   top: 305px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -344,6 +364,7 @@ body {
   height: 612px;
   left: 710px;
   top: 341px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -360,6 +381,7 @@ body {
   height: 612px;
   left: 710px;
   top: 377px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -376,6 +398,7 @@ body {
   height: 612px;
   left: 710px;
   top: 413px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -392,6 +415,7 @@ body {
   height: 612px;
   left: 710px;
   top: 449px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -408,6 +432,7 @@ body {
   height: 612px;
   left: 710px;
   top: 485px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -424,6 +449,7 @@ body {
   height: 612px;
   left: 710px;
   top: 521px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -440,6 +466,7 @@ body {
   height: 612px;
   left: 710px;
   top: 557px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -456,6 +483,7 @@ body {
   height: 612px;
   left: 710px;
   top: 593px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -472,6 +500,7 @@ body {
   height: 612px;
   left: 710px;
   top: 629px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -488,6 +517,7 @@ body {
   height: 612px;
   left: 710px;
   top: 665px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -504,6 +534,7 @@ body {
   height: 612px;
   left: 710px;
   top: 701px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -520,6 +551,7 @@ body {
   height: 612px;
   left: 710px;
   top: 737px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -536,6 +568,7 @@ body {
   height: 612px;
   left: 710px;
   top: 773px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -552,6 +585,7 @@ body {
   height: 612px;
   left: 710px;
   top: 809px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;
@@ -568,6 +602,7 @@ body {
   height: 612px;
   left: 710px;
   top: 845px;
+  z-index: 12;
 
   font-family: 'Special Elite';
   font-style: normal;

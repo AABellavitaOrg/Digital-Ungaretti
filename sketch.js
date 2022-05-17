@@ -79,7 +79,7 @@ function preload() {
   vidVeglia3 = createVideo("assets/videos/veglia/Veglia_3.mp4");
   vidVeglia4 = createVideo("assets/videos/veglia/Veglia_4.mp4");
   vidVeglia5 = createVideo("assets/videos/veglia/Veglia_5.mp4");
-  vidVeglia1.position(1260, 0);
+  vidVeglia1.position(960, 0);
   vidVeglia2.position(960, 0);
   vidVeglia3.position(960, 0);
   vidVeglia4.position(960, 0);
@@ -90,15 +90,8 @@ function preload() {
   vidVeglia4.hide();
   vidVeglia5.hide();
 
-  myPaper = loadImage("assets/images/myPaper.png");
-  //myBackground = loadImage("assets/images/myBackground.jpg");
-  //image(myBackground, 0, 0, 1920, 1080);
-  //image(myPaper, -35, -97, 1383, 1205);
-
-  //carta = createImg("assets/images/myPaper.png")
-  //carta.position(-1000, -97);
-  //carta.width(1383);
-  //carta.height(1080);
+  //myPaper = loadImage("assets/images/myPaper.png");
+  //myBackground = loadImage("assets/images/myBackgroundHole.png");
 
 }
 
@@ -110,9 +103,21 @@ function setup() {
   image(myBackground, 0, 0, width, height);
   image(myPaper, 0, 0, width-(width/3.5), height);
 
+  image(myPaper, -35, -97, 1383, 1205);
   image(myBackground, 0, 0, 1920, 1080);
   */
-  image(myPaper, -35, -97, 1383, 1205);
+
+  carta = createImg("assets/images/myPaper.png");
+  carta.position(-33, -91);
+  carta.style('z-index', 10);
+  carta.style('width: 1383px');
+  carta.style('height: 1205px');
+
+  sfondo = createImg("assets/images/myBackgroundHole.png");
+  sfondo.position(0, 0);
+  sfondo.style('z-index', 8);
+  sfondo.style('width: 1920px');
+  sfondo.style('height: 1080px');
 
   text_ti = createDiv(emptyT);
   text_ti.id("text_ti");
@@ -294,6 +299,7 @@ function addveglia2() {
     vidVeglia1.hide();
     vidVeglia2.show();
     vidVeglia2.play();
+
     veglia1status = false;
     veglia2status = true;
   }
