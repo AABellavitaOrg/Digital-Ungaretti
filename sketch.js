@@ -1,6 +1,14 @@
 // variables
 let emptyT = "";
 
+////status generale poesie
+let veglia = true;
+let fratelli = false;
+let smcarso = false;
+let soldati = false;
+
+let button_veglia;
+
 //Veglia
 let vegliati = "Veglia";
 let veglia01ita = "Un’intera nottata"
@@ -44,7 +52,27 @@ let veglia4status = false;
 let veglia5status = false;
 let vegliacounter = 0;
 
-function preload(){
+
+//fratelli
+let fratelliti = "Fratelli"
+let fratelli01ita = "Di che reggimento siete"
+let fratelli1status = false;
+
+
+//San Martino del Carso
+let smcarsoti = "San Martino del Carso"
+let smcarso01ita = "Di che reggimento siete"
+let smcarso1status = false;
+
+
+//soldati
+let soldatiti = "Soldati"
+let soldati01ita = "Di che reggimento siete"
+let soldati1status = false;
+
+
+
+function preload() {
   //video Veglia
   vidVeglia1 = createVideo("assets/videos/veglia/Veglia_1.mp4");
   vidVeglia2 = createVideo("assets/videos/veglia/Veglia_2.mp4");
@@ -76,7 +104,7 @@ function preload(){
 
 function setup() {
   //createCanvas(windowWidth,windowHeight);
-  createCanvas(1920,1080);
+  createCanvas(1920, 1080);
   background('#1b1b1b');
   /*
   image(myBackground, 0, 0, width, height);
@@ -233,8 +261,9 @@ function setup() {
   text_17e.class("poem17eng");
 }
 
+/////aggiunta condizione veglia == true
 function addveglia1() {
-  if (veglia1status == false) {
+  if (veglia1status == false && veglia == true) {
     document.getElementById('text_ti').innerHTML = vegliati;
     document.getElementById('text_01').innerHTML = veglia01ita;
     document.getElementById('text_02').innerHTML = veglia02ita;
@@ -251,7 +280,7 @@ function addveglia1() {
 }
 
 function addveglia2() {
-  if (veglia2status == false) {
+  if (veglia2status == false && veglia == true) {
     document.getElementById('text_04').innerHTML = veglia04ita;
     document.getElementById('text_05').innerHTML = veglia05ita;
     document.getElementById('text_06').innerHTML = veglia06ita;
@@ -271,7 +300,7 @@ function addveglia2() {
 }
 
 function addveglia3() {
-  if (veglia3status == false) {
+  if (veglia3status == false && veglia == true) {
     document.getElementById('text_08').innerHTML = veglia08ita;
     document.getElementById('text_09').innerHTML = veglia09ita;
     document.getElementById('text_10').innerHTML = veglia10ita;
@@ -289,7 +318,7 @@ function addveglia3() {
 }
 
 function addveglia4() {
-  if (veglia4status == false) {
+  if (veglia4status == false && veglia == true) {
     document.getElementById('text_11').innerHTML = veglia11ita;
     document.getElementById('text_12').innerHTML = veglia12ita;
     document.getElementById('text_13').innerHTML = veglia13ita;
@@ -307,7 +336,7 @@ function addveglia4() {
 }
 
 function addveglia5() {
-  if (veglia5status == false) {
+  if (veglia5status == false && veglia == true) {
     document.getElementById('text_15').innerHTML = veglia15ita;
     document.getElementById('text_16').innerHTML = veglia16ita;
     document.getElementById('text_17').innerHTML = veglia17ita;
@@ -330,23 +359,136 @@ function addveglia6() {
   vidVeglia5.hide();
 }
 
+/////////////////ADD FRATELLI//////
+
+function addfratelli1() {
+  if (fratelli1status == false && fratelli == true) {
+    document.getElementById('text_ti').innerHTML = fratelliti;
+    document.getElementById('text_01').innerHTML = fratelli01ita;
+    // document.getElementById('text_02').innerHTML = veglia02ita;
+    // document.getElementById('text_03').innerHTML = veglia03ita;
+    //
+    // document.getElementById('text_01e').innerHTML = veglia01eng;
+    // document.getElementById('text_02e').innerHTML = veglia02eng;
+    // document.getElementById('text_03e').innerHTML = veglia03eng;
+    //
+    // vidVeglia1.show();
+    // vidVeglia1.play();
+    fratelli1status = true;
+
+  }
+}
+
+/////////////////ADD SAN MARTINO DEL CARSO//////
+
+function addsmcarso1() {
+  if (smcarso1status == false && smcarso == true) {
+    document.getElementById('text_ti').innerHTML = smcarsoti;
+    document.getElementById('text_01').innerHTML = smcarso01ita;
+    // document.getElementById('text_02').innerHTML = veglia02ita;
+    // document.getElementById('text_03').innerHTML = veglia03ita;
+    //
+    // document.getElementById('text_01e').innerHTML = veglia01eng;
+    // document.getElementById('text_02e').innerHTML = veglia02eng;
+    // document.getElementById('text_03e').innerHTML = veglia03eng;
+    //
+    // vidVeglia1.show();
+    // vidVeglia1.play();
+    smcarso1status = true;
+
+  }
+}
+
+/////////////////ADD SOLDATI//////
+
+function addsoldati1() {
+  if (soldati1status == false && soldati == true) {
+    document.getElementById('text_ti').innerHTML = soldatiti;
+    document.getElementById('text_01').innerHTML = soldati01ita;
+    // document.getElementById('text_02').innerHTML = veglia02ita;
+    // document.getElementById('text_03').innerHTML = veglia03ita;
+    //
+    // document.getElementById('text_01e').innerHTML = veglia01eng;
+    // document.getElementById('text_02e').innerHTML = veglia02eng;
+    // document.getElementById('text_03e').innerHTML = veglia03eng;
+    //
+    // vidVeglia1.show();
+    // vidVeglia1.play();
+    soldati1status = true;
+
+  }
+}
+
 function draw() {
+  button_veglia = createButton("")
+  button_veglia.position(100, 100);
+  button_veglia.style('background-color', '#FFFFFF');
+  button_veglia.style('padding', '10px');
+  button_veglia.style('border', '2px solid #000000')
+  button_veglia.style('border-radius', '50%')
+  if (veglia == false) {
+    button_veglia.mousePressed(switchToVeglia);
+  }
+  if (veglia == true) {
+    button_veglia.style('border', '2px solid #FFFFFF')
+  }
+
+
+  let button_fratelli = createButton("")
+  button_fratelli.position(100, 130);
+  button_fratelli.style('background-color', '#FFFFFF');
+  button_fratelli.style('padding', '10px');
+  button_fratelli.style('border-radius', '50%')
+  if (fratelli == false) {
+    button_fratelli.mousePressed(switchToFratelli);
+  }
+  if (fratelli == true) {
+    button_fratelli.style('border', '2px solid #FFFFFF')
+  }
+
+
+
+
+  let button_smcarso = createButton("")
+  button_smcarso.position(100, 160);
+  button_smcarso.style('background-color', '#FFFFFF');
+  button_smcarso.style('padding', '10px');
+  button_smcarso.style('border-radius', '50%')
+  if (smcarso == false) {
+    button_smcarso.mousePressed(switchToSmcarso);
+  }
+  if (smcarso == true) {
+    button_smcarso.style('border', '2px solid #FFFFFF')
+  }
+
+  let button_soldati = createButton("")
+  button_soldati.position(100, 190);
+  button_soldati.style('background-color', '#FFFFFF');
+  button_soldati.style('padding', '10px');
+  button_soldati.style('border-radius', '50%')
+  if (soldati == false) {
+    button_soldati.mousePressed(switchToSoldati);
+  }
+  if (soldati == true) {
+    button_soldati.style('border', '2px solid #FFFFFF')
+  }
+
 
 }
 
 function mousePressed() {
   console.log(vidVeglia1.time());
-  if (veglia1status == false && vidVeglia1.time()/vidVeglia1.duration() != 1) {
+  if (veglia1status == false && vidVeglia1.time() / vidVeglia1.duration() != 1) {
     addveglia1();
-  } else if (veglia1status == true && vidVeglia1.time()/vidVeglia1.duration() == 1) {
+  } else if (veglia1status == true && vidVeglia1.time() / vidVeglia1.duration() == 1) {
     addveglia2();
-  } else if (veglia2status == true && vidVeglia2.time()/vidVeglia2.duration() == 1) {
+  } else if (veglia2status == true && vidVeglia2.time() / vidVeglia2.duration() == 1) {
     addveglia3();
-  } else if (veglia3status == true && vidVeglia3.time()/vidVeglia3.duration() == 1) {
+  } else if (veglia3status == true && vidVeglia3.time() / vidVeglia3.duration() == 1) {
     addveglia4();
-  } else if (veglia4status == true && vidVeglia4.time()/vidVeglia4.duration() == 1) {
+  } else if (veglia4status == true && vidVeglia4.time() / vidVeglia4.duration() == 1) {
     addveglia5();
-  } else if (veglia5status == true && vidVeglia5.time()/vidVeglia5.duration() == 1) {
+  } else if (veglia5status == true && vidVeglia5.time() / vidVeglia5.duration() == 1) {
     addveglia6();
   }
 }
@@ -400,4 +542,160 @@ function erasePoem() {
   vidVeglia4.currentTime = 0;
   vidVeglia5.currentTime = 0;
   */
+}
+
+function switchToVeglia() {
+  erasePoem();
+  veglia = true;
+
+  if (fratelli == true) {
+    fratelli = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+
+  if (smcarso == true) {
+    smcarso = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+
+  if (soldati == true) {
+    soldati = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+  addveglia1();
+
+
+}
+
+
+function switchToFratelli() {
+  erasePoem();
+  fratelli = true;
+
+  if (veglia == true) {
+    veglia = false;
+    veglia1status = false;
+    veglia2status = false;
+    veglia3status = false;
+    veglia4status = false;
+    veglia5status = false;
+
+    vidVeglia1.hide();
+    vidVeglia2.hide();
+    vidVeglia3.hide();
+    vidVeglia4.hide();
+    vidVeglia5.hide();
+  }
+
+  if (smcarso == true) {
+    smcarso = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+
+  if (soldati == true) {
+    soldati = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+  addfratelli1();
+}
+
+
+
+function switchToSmcarso() {
+  erasePoem();
+  smcarso = true;
+
+  if (veglia == true) {
+    veglia = false;
+    veglia1status = false;
+    veglia2status = false;
+    veglia3status = false;
+    veglia4status = false;
+    veglia5status = false;
+
+    vidVeglia1.hide();
+    vidVeglia2.hide();
+    vidVeglia3.hide();
+    vidVeglia4.hide();
+    vidVeglia5.hide();
+  }
+
+  if (fratelli == true) {
+    fratelli = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+
+  if (soldati == true) {
+    soldati = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+  addsmcarso1();
+}
+
+
+function switchToSoldati() {
+  erasePoem();
+  soldati = true;
+
+  if (veglia == true) {
+    veglia = false;
+    veglia1status = false;
+    veglia2status = false;
+    veglia3status = false;
+    veglia4status = false;
+    veglia5status = false;
+
+    vidVeglia1.hide();
+    vidVeglia2.hide();
+    vidVeglia3.hide();
+    vidVeglia4.hide();
+    vidVeglia5.hide();
+  }
+
+  if (fratelli == true) {
+    fratelli = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+
+  if (smcarso == true) {
+    smcarso = false;
+    // vidVeglia1.hide();
+    // vidVeglia2.hide();
+    // vidVeglia3.hide();
+    // vidVeglia4.hide();
+    // vidVeglia5.hide();
+  }
+  addsoldati1();
 }
