@@ -185,6 +185,10 @@ function setup() {
   carta.style('width: 1383px');
   carta.style('height: 1205px');
 
+  linea = createImg("assets/images/linea.png");
+  linea.position(318, 283);
+  linea.style('z-index', 11);
+
   sfondo = createImg("assets/images/myBackgroundHole.png");
   sfondo.position(0, 0);
   sfondo.style('z-index', 8);
