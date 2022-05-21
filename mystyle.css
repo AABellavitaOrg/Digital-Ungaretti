@@ -8,6 +8,64 @@ body {
   height: 100%;
 }
 
+.maintitlehome {
+  position: absolute;
+  width: 1920px;
+  height: 113px;
+  left: 495px;
+  top: 443px;
+  z-index: 21;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 64px;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.credits {
+  position: absolute;
+  width: 1380px;
+  height: 20px;
+  left: 320px;
+  top: 1000px;
+  z-index: 21;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.playbutt {
+  position: absolute;
+  width: 70.1px;
+  height: 77px;
+  left: 925.45px;
+  top: 546px;
+  cursor: pointer;
+
+  z-index: 21;
+}
+
+.homebutt {
+  position: absolute;
+  width: 70.1px;
+  height: 77px;
+  left: 179px;
+  top: 917px;
+  cursor: pointer;
+
+  z-index: 10;
+}
 
 .maintitle {
   position: absolute;
@@ -613,22 +671,16 @@ body {
   color: #656565;
 }
 
-.data1 {
-  position: absolute;
-  width: 173px;
-  height: 20px;
-  left: 105px;
-  top: 276px;
-  z-index: 12;
 
-  font-family: 'Special Elite';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
 
-  color: #000000;
-}
+
+
+
+
+
+
+
+
 
 .data1 {
   position: absolute;
@@ -646,8 +698,9 @@ body {
 
   text-align: right;
   padding: 0px;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
+  cursor: pointer;
 
   color: #000000;
 }
@@ -668,8 +721,9 @@ body {
 
   text-align: right;
   padding: 0px;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
+  cursor: pointer;
 
   color: #656565;
 }
@@ -690,8 +744,9 @@ body {
 
   text-align: right;
   padding: 0px;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
+  cursor: pointer;
 
   color: #656565;
 }
@@ -712,8 +767,24 @@ body {
 
   text-align: right;
   padding: 0px;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
+  cursor: pointer;
 
   color: #656565;
+}
+
+.click {
+  position: absolute;
+  width: 550px;
+  height: 36px;
+  left: 362px;
+  top: 953px;
+  z-index: 12;
+
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
 }

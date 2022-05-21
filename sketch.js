@@ -1,5 +1,11 @@
-// variables
+//variables
 let emptyT = "";
+let xcarta = -900;
+let homestatus = true;
+let overcarta = false;
+let cartalimite = false;
+let homeinposition = false;
+let resetpaper = false;
 
 ////status generale poesie
 let veglia = true;
@@ -48,12 +54,11 @@ let veglia15eng = "I've never been";
 let veglia16eng = "so much";
 let veglia17eng = "attached to life";
 
-let veglia1status = false;
+let veglia1status = true;
 let veglia2status = false;
 let veglia3status = false;
 let veglia4status = false;
 let veglia5status = false;
-let vegliacounter = 0;
 
 
 //fratelli
@@ -153,7 +158,7 @@ function preload() {
   vidVeglia4.hide();
   vidVeglia5.hide();
 
-  //vdeo Fratelli
+  //video Fratelli
   vidFratelli1 = createVideo("assets/videos/fratelli/fratelli_1.mp4");
   vidFratelli2 = createVideo("assets/videos/fratelli/fratelli_2.mp4");
   vidFratelli3 = createVideo("assets/videos/fratelli/fratelli_3.mp4");
@@ -178,11 +183,10 @@ function preload() {
   vidSmcarso3.hide();
   vidSmcarso4.hide();
 
-
+  //video soldati
   vidSoldati = createVideo("assets/videos/soldati/Soldati.mp4");
   vidSoldati.position(960, 0);
   vidSoldati.hide();
-
 
   //myPaper = loadImage("assets/images/myPaper.png");
   //myBackground = loadImage("assets/images/myBackgroundHole.png");
@@ -194,11 +198,36 @@ function setup() {
   createCanvas(1920, 1080);
   background('#1b1b1b');
 
-  carta = createImg("assets/images/myPaper.png");
-  carta.position(-33, -91);
-  carta.style('z-index', 10);
-  carta.style('width: 1383px');
-  carta.style('height: 1205px');
+  sfondoHome = createImg("assets/images/myBackground.png");
+  sfondoHome.position(0, 0);
+  sfondoHome.style('z-index', 20);
+  // sfondo.style('width: 1920px');
+  // sfondo.style('height: 1080px');
+
+  cartaHome = createImg("assets/images/myPaper2.png");
+  cartaHome.position(-900, 0);
+  cartaHome.style('z-index', 21);
+
+  text_home = createDiv("I wrote letters full of love.");
+  text_home.id("text_home");
+  text_home.class("maintitlehome");
+
+  text_credits = createDiv("A project by: Alessandro Pennachioni, Andrea Bellavita, Elettra Panepinto, Luigi Salvatore, Matteo Repetto, Tancredi Ario Pelà");
+  text_credits.id("text_credits");
+  text_credits.class("credits");
+
+  playbutt = createImg("assets/images/Play.png");
+  playbutt.class("playbutt");
+
+  homebutt = createImg("assets/images/Home.png");
+  homebutt.class("homebutt");
+
+
+  // carta = createImg("assets/images/myPaper2.png");
+  // carta.position(0, 0);
+  // carta.style('z-index', 10);
+  // carta.style('width: 1383px');
+  // carta.style('height: 1205px');
 
   linea = createImg("assets/images/linea.png");
   linea.position(318, 283);
@@ -207,12 +236,17 @@ function setup() {
   sfondo = createImg("assets/images/myBackgroundHole.png");
   sfondo.position(0, 0);
   sfondo.style('z-index', 8);
-  sfondo.style('width: 1920px');
-  sfondo.style('height: 1080px');
+  // sfondo.style('width: 1920px');
+  // sfondo.style('height: 1080px');
 
   text_ti = createDiv(emptyT);
   text_ti.id("text_ti");
   text_ti.class("maintitle");
+
+  text_click = createDiv("Click on the screen to proceed with the poem");
+  text_click.id("text_click");
+  text_click.class("click");
+  text_click.hide();
 
   //text ita
   text_01 = createDiv(emptyT);
@@ -371,19 +405,22 @@ function setup() {
   button_veglia = createButton("")
   button_veglia.style('border-radius', '50%');
   button_veglia.style('z-index', 12);
+  button_veglia.style('cursor', 'pointer');
 
   button_fratelli = createButton("")
   button_fratelli.style('border-radius', '50%');
   button_fratelli.style('z-index', 12);
+  button_fratelli.style('cursor', 'pointer');
 
   button_smcarso = createButton("")
   button_smcarso.style('border-radius', '50%');
   button_smcarso.style('z-index', 12);
+  button_smcarso.style('cursor', 'pointer');
 
   button_soldati = createButton("")
   button_soldati.style('border-radius', '50%')
   button_soldati.style('z-index', 12);
-
+  button_soldati.style('cursor', 'pointer');
 }
 
 /////aggiunta condizione veglia == true
@@ -416,6 +453,7 @@ function addveglia2() {
     document.getElementById('text_06e').innerHTML = veglia06eng;
     document.getElementById('text_07e').innerHTML = veglia07eng;
 
+    vidVeglia1.time(0);
     vidVeglia1.hide();
     vidVeglia2.show();
     vidVeglia2.play();
@@ -435,6 +473,7 @@ function addveglia3() {
     document.getElementById('text_09e').innerHTML = veglia09eng;
     document.getElementById('text_10e').innerHTML = veglia10eng;
 
+    vidVeglia2.time(0);
     vidVeglia2.hide();
     vidVeglia3.show();
     vidVeglia3.play();
@@ -453,6 +492,7 @@ function addveglia4() {
     document.getElementById('text_12e').innerHTML = veglia12eng;
     document.getElementById('text_13e').innerHTML = veglia13eng;
 
+    vidVeglia3.time(0);
     vidVeglia3.hide();
     vidVeglia4.show();
     vidVeglia4.play();
@@ -471,6 +511,7 @@ function addveglia5() {
     document.getElementById('text_16e').innerHTML = veglia16eng;
     document.getElementById('text_17e').innerHTML = veglia17eng;
 
+    vidVeglia4.time(0);
     vidVeglia4.hide();
     vidVeglia5.show();
     vidVeglia5.play();
@@ -482,6 +523,7 @@ function addveglia5() {
 function addveglia6() {
   erasePoem();
   veglia5status = false;
+  vidVeglia5.time(0);
   vidVeglia5.hide();
 }
 
@@ -500,7 +542,6 @@ function addfratelli1() {
     document.getElementById('text_04e').innerHTML = fratelli04eng;
     document.getElementById('text_05e').innerHTML = fratelli05eng;
     //
-    //
     vidFratelli1.show();
     vidFratelli1.play();
     fratelli1status = true;
@@ -515,9 +556,10 @@ function addfratelli2() {
     document.getElementById('text_07e').innerHTML = fratelli07eng;
     document.getElementById('text_09e').innerHTML = fratelli09eng;
     //
+    vidFratelli1.time(0);
+    vidFratelli1.hide();
     vidFratelli2.show();
     vidFratelli2.play();
-    vidFratelli1.hide();
     fratelli2status = true;
     fratelli1status = false;
   }
@@ -535,9 +577,10 @@ function addfratelli3() {
     document.getElementById('text_12e').innerHTML = fratelli12eng;
     document.getElementById('text_14e').innerHTML = fratelli14eng;
     //
-     vidFratelli3.show();
-     vidFratelli3.play();
-     vidFratelli2.hide();
+    vidFratelli2.time(0);
+    vidFratelli2.hide();
+    vidFratelli3.show();
+    vidFratelli3.play();
     fratelli3status = true;
     fratelli2status = false;
   }
@@ -546,6 +589,7 @@ function addfratelli3() {
 function addfratelli4() {
   erasePoem();
   fratelli3status = false;
+  vidFratelli3.time(0);
   vidFratelli3.hide();
 }
 
@@ -584,6 +628,7 @@ function addsmcarso2() {
     document.getElementById('text_08e').innerHTML = smcarso08eng;
     document.getElementById('text_09e').innerHTML = smcarso09eng;
 
+    vidSmcarso1.time(0);
     vidSmcarso1.hide();
     vidSmcarso2.show();
     vidSmcarso2.play();
@@ -601,6 +646,7 @@ function addsmcarso3() {
     document.getElementById('text_11e').innerHTML = smcarso11eng;
     document.getElementById('text_12e').innerHTML = smcarso12eng;
 
+    vidSmcarso2.time(0);
     vidSmcarso2.hide();
     vidSmcarso3.show();
     vidSmcarso3.play();
@@ -618,6 +664,7 @@ function addsmcarso4() {
     document.getElementById('text_14e').innerHTML = smcarso14eng;
     document.getElementById('text_15e').innerHTML = smcarso15eng;
 
+    vidSmcarso3.time(0);
     vidSmcarso3.hide();
     vidSmcarso4.show();
     vidSmcarso4.play();
@@ -629,6 +676,7 @@ function addsmcarso4() {
 function addsmcarso5() {
   erasePoem();
   smcarso4status = false;
+  vidSmcarso4.time(0);
   vidSmcarso4.hide();
 }
 
@@ -639,7 +687,7 @@ function addsoldati1() {
   if (soldati1status == false && soldati == true) {
     document.getElementById('text_ti').innerHTML = soldatiti;
     document.getElementById('text_01').innerHTML = soldati01ita;
-        //
+    //
     document.getElementById('text_01e').innerHTML = soldati01eng;
 
     vidSoldati.show();
@@ -652,18 +700,18 @@ function addsoldati1() {
 function addsoldati2() {
   if (soldati2status == false && soldati == true) {
     document.getElementById('text_02').innerHTML = soldati02ita;
-        //
+    //
     document.getElementById('text_02e').innerHTML = soldati02eng;
-   console.log("hello!");
+
     soldati2status = true;
-   soldati1status = false;
+    soldati1status = false;
   }
 }
 
 function addsoldati3() {
   if (soldati3status == false && soldati == true) {
     document.getElementById('text_03').innerHTML = soldati03ita;
-        //
+    //
     document.getElementById('text_03e').innerHTML = soldati03eng;
 
     soldati3status = true;
@@ -674,7 +722,7 @@ function addsoldati3() {
 function addsoldati4() {
   if (soldati4status == false && soldati == true) {
     document.getElementById('text_04').innerHTML = soldati04ita;
-        //
+    //
     document.getElementById('text_04e').innerHTML = soldati04eng;
 
     soldati4status = true;
@@ -685,14 +733,31 @@ function addsoldati4() {
 function addsoldati5() {
   erasePoem();
   soldati4status = false;
+  vidSoldati.time(0);
   vidSoldati.hide();
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function draw() {
 
-let dur = vidSoldati.time() / vidSoldati.duration()
-console.log(dur);
+  let dur = vidSoldati.time() / vidSoldati.duration()
+  //console.log(dur);
 
   if (veglia == false) {
     button_veglia.mousePressed(switchToVeglia);
@@ -721,7 +786,6 @@ console.log(dur);
     data4.style('color', '#656565');
   }
 
-
   if (fratelli == false) {
     button_fratelli.mousePressed(switchToFratelli);
     data2.mousePressed(switchToFratelli);
@@ -748,7 +812,6 @@ console.log(dur);
     data3.style('color', '#656565');
     data4.style('color', '#656565');
   }
-
 
   if (smcarso == false) {
     button_smcarso.mousePressed(switchToSmcarso);
@@ -777,7 +840,6 @@ console.log(dur);
     data4.style('color', '#656565');
   }
 
-
   if (soldati == false) {
     button_soldati.mousePressed(switchToSoldati);
     data4.mousePressed(switchToSoldati);
@@ -804,9 +866,10 @@ console.log(dur);
     data3.style('color', '#656565');
     data4.style('color', '#000000');
   }
+
   if (soldati1status == false && vidSoldati.time() / vidSoldati.duration() != 0.1) {
     addsoldati1();
-  } else if (soldati1status == true && vidSoldati.time() / vidSoldati.duration() >= 0.25 && vidSoldati.time() / vidSoldati.duration() <0.5) {
+  } else if (soldati1status == true && vidSoldati.time() / vidSoldati.duration() >= 0.25 && vidSoldati.time() / vidSoldati.duration() < 0.5) {
     addsoldati2();
   } else if (soldati2status == true && vidSoldati.time() / vidSoldati.duration() >= 0.5  && vidSoldati.time() / vidSoldati.duration() < 0.75) {
     addsoldati3();
@@ -814,7 +877,73 @@ console.log(dur);
     addsoldati4();
   }
 
+
+  //click screen
+  if (vidVeglia1.time() / vidVeglia1.duration() == 1 || vidVeglia2.time() / vidVeglia2.duration() == 1 || vidVeglia3.time() / vidVeglia3.duration() == 1 || vidVeglia4.time() / vidVeglia4.duration() == 1 || vidVeglia5.time() / vidVeglia5.duration() == 1) {
+    text_click.show();
+  } else if (vidVeglia1.time() / vidVeglia1.duration() != 1 || vidVeglia2.time() / vidVeglia2.duration() != 1 || vidVeglia3.time() / vidVeglia3.duration() != 1 || vidVeglia4.time() / vidVeglia4.duration() != 1 || vidVeglia5.time() / vidVeglia5.duration() != 1) {
+    text_click.hide();
+  }
+
+  //home behaviour
+  cartaHome.mousePressed(openpoem);
+  playbutt.mousePressed(openpoem);
+  playbutt.mouseOver(paperanimin);
+  playbutt.mouseOut(paperanimout);
+  homebutt.mousePressed(closepoem);
+
+  if (xcarta < 0 && homestatus == false && homeinposition == false) {
+    xcarta = xcarta + 20;
+    cartaHome.position(xcarta, 0);
+  }
+
+  if (xcarta == 0 && homeinposition == false) {
+    cartaHome.style('z-index', 10);
+    homeinposition = true;
+    veglia1status = false;
+    addveglia1();
+  }
+
+  if (xcarta < -800 && overcarta == true && cartalimite == false && homestatus == true) {
+    xcarta = xcarta + 20;
+    cartaHome.position(xcarta, 0);
+  }
+
+  if (xcarta == -800 && homestatus == true) {
+    cartalimite = true;
+  }
+
+  if (xcarta > -900 && overcarta == false && cartalimite == true && homestatus == true) {
+    xcarta = xcarta - 20;
+    cartaHome.position(xcarta, 0);
+  }
+
+  if (xcarta == -900 && homestatus == true) {
+    cartalimite = false;
+    if (resetpaper == true) {
+      playbutt.show();
+      text_credits.show();
+      text_home.show();
+      resetpaper = false;
+      homeinposition = false;
+    }
+  }
+
+  if (xcarta > -900 && resetpaper == true) {
+    xcarta = xcarta - 20;
+    cartaHome.position(xcarta, 0);
+  }
+
+
 }
+
+
+
+
+
+
+
+
 
 function mousePressed() {
   //veglia
@@ -862,6 +991,14 @@ if (soldati4status == true && vidSoldati.time() / vidSoldati.duration() == 1) {
 }
 
 
+
+
+
+
+
+
+
+
 function erasePoem() {
   document.getElementById('text_ti').innerHTML = "";
   document.getElementById('text_01').innerHTML = "";
@@ -901,8 +1038,21 @@ function erasePoem() {
   document.getElementById('text_17e').innerHTML = "";
 
   vidVeglia1.time(0);
+  // vidVeglia2.time(0);
+  // vidVeglia3.time(0);
+  // vidVeglia4.time(0);
+  // vidVeglia5.time(0);
+
   vidFratelli1.time(0);
+  // vidFratelli2.time(0);
+  // vidFratelli3.time(0);
+
   vidSmcarso1.time(0);
+  // vidSmcarso2.time(0);
+  // vidSmcarso3.time(0);
+  // vidSmcarso4.time(0);
+
+  vidSoldati.time(0);
 
 }
 
@@ -917,6 +1067,10 @@ function switchToVeglia() {
     fratelli2status = false;
     fratelli3status = false;
 
+    vidFratelli1.time(0);
+    vidFratelli2.time(0);
+    vidFratelli3.time(0);
+
     vidFratelli1.hide();
     vidFratelli2.hide();
     vidFratelli3.hide();
@@ -928,6 +1082,11 @@ function switchToVeglia() {
     smcarso2status = false;
     smcarso3status = false;
     smcarso4status = false;
+
+    vidSmcarso1.time(0);
+    vidSmcarso2.time(0);
+    vidSmcarso3.time(0);
+    vidSmcarso4.time(0);
 
     vidSmcarso1.hide();
     vidSmcarso2.hide();
@@ -942,11 +1101,11 @@ function switchToVeglia() {
     soldati3status = false;
     soldati4status = false;
 
+    vidSoldati.time(0);
     vidSoldati.hide();
   }
   addveglia1();
 }
-
 
 function switchToFratelli() {
   erasePoem();
@@ -961,6 +1120,11 @@ function switchToFratelli() {
     veglia4status = false;
     veglia5status = false;
 
+    vidVeglia2.time(0);
+    vidVeglia3.time(0);
+    vidVeglia4.time(0);
+    vidVeglia5.time(0);
+
     vidVeglia1.hide();
     vidVeglia2.hide();
     vidVeglia3.hide();
@@ -975,6 +1139,11 @@ function switchToFratelli() {
     smcarso3status = false;
     smcarso4status = false;
 
+    vidSmcarso1.time(0);
+    vidSmcarso2.time(0);
+    vidSmcarso3.time(0);
+    vidSmcarso4.time(0);
+
     vidSmcarso1.hide();
     vidSmcarso2.hide();
     vidSmcarso3.hide();
@@ -988,12 +1157,11 @@ function switchToFratelli() {
     soldati3status = false;
     soldati4status = false;
 
+    vidSoldati.time(0);
     vidSoldati.hide();
   }
   addfratelli1();
 }
-
-
 
 function switchToSmcarso() {
   erasePoem();
@@ -1008,6 +1176,11 @@ function switchToSmcarso() {
     veglia4status = false;
     veglia5status = false;
 
+    vidVeglia2.time(0);
+    vidVeglia3.time(0);
+    vidVeglia4.time(0);
+    vidVeglia5.time(0);
+
     vidVeglia1.hide();
     vidVeglia2.hide();
     vidVeglia3.hide();
@@ -1021,6 +1194,10 @@ function switchToSmcarso() {
     fratelli2status == false;
     fratelli3status == false;
 
+    vidFratelli1.time(0);
+    vidFratelli2.time(0);
+    vidFratelli3.time(0);
+
     vidFratelli1.hide();
     vidFratelli2.hide();
     vidFratelli3.hide();
@@ -1033,11 +1210,11 @@ function switchToSmcarso() {
     soldati3status = false;
     soldati4status = false;
 
+    vidSoldati.time(0);
     vidSoldati.hide();
   }
   addsmcarso1();
 }
-
 
 function switchToSoldati() {
   erasePoem();
@@ -1052,6 +1229,11 @@ function switchToSoldati() {
     veglia4status = false;
     veglia5status = false;
 
+    vidVeglia2.time(0);
+    vidVeglia3.time(0);
+    vidVeglia4.time(0);
+    vidVeglia5.time(0);
+
     vidVeglia1.hide();
     vidVeglia2.hide();
     vidVeglia3.hide();
@@ -1065,6 +1247,10 @@ function switchToSoldati() {
     fratelli2status == false;
     fratelli3status == false;
 
+    vidFratelli1.time(0);
+    vidFratelli2.time(0);
+    vidFratelli3.time(0);
+
     vidFratelli1.hide();
     vidFratelli2.hide();
     vidFratelli3.hide();
@@ -1077,6 +1263,11 @@ function switchToSoldati() {
     smcarso3status = false;
     smcarso4status = false;
 
+    vidSmcarso1.time(0);
+    vidSmcarso2.time(0);
+    vidSmcarso3.time(0);
+    vidSmcarso4.time(0);
+
     vidSmcarso1.hide();
     vidSmcarso2.hide();
     vidSmcarso3.hide();
@@ -1085,6 +1276,76 @@ function switchToSoldati() {
   addsoldati1();
 }
 
-function setLineDash(list) {
-  drawingContext.setLineDash(list);
+function openpoem() {
+  homestatus = false;
+  sfondoHome.hide();
+  playbutt.hide();
+  text_credits.hide();
+  text_home.hide();
+}
+
+function closepoem() {
+  switchToVegliaHOME();
+  homestatus = true;
+  resetpaper = true;
+  sfondoHome.show();
+  cartaHome.style('z-index', 21);
+}
+
+function paperanimin() {
+  overcarta = true;
+}
+
+function paperanimout() {
+  overcarta = false;
+}
+
+function switchToVegliaHOME() {
+  erasePoem();
+  veglia = true;
+  veglia1status = true;
+
+  if (fratelli == true) {
+    fratelli = false;
+    fratelli1status = false;
+    fratelli2status = false;
+    fratelli3status = false;
+
+    vidFratelli1.time(0);
+    vidFratelli2.time(0);
+    vidFratelli3.time(0);
+
+    vidFratelli1.hide();
+    vidFratelli2.hide();
+    vidFratelli3.hide();
+  }
+
+  if (smcarso == true) {
+    smcarso = false;
+    smcarso1status = false;
+    smcarso2status = false;
+    smcarso3status = false;
+    smcarso4status = false;
+
+    vidSmcarso1.time(0);
+    vidSmcarso2.time(0);
+    vidSmcarso3.time(0);
+    vidSmcarso4.time(0);
+
+    vidSmcarso1.hide();
+    vidSmcarso2.hide();
+    vidSmcarso3.hide();
+    vidSmcarso4.hide();
+  }
+
+  if (soldati == true) {
+    soldati = false;
+    soldati1status = false;
+    soldati2status = false;
+    soldati3status = false;
+    soldati4status = false;
+
+    vidSoldati.time(0);
+    vidSoldati.hide();
+  }
 }
