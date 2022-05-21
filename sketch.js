@@ -233,6 +233,10 @@ function setup() {
   linea.position(318, 283);
   linea.style('z-index', 11);
 
+  texture = createImg("assets/images/Noise.png");
+  texture.position(0, 0);
+  texture.style('z-index', 9);
+
   sfondo = createImg("assets/images/myBackgroundHole.png");
   sfondo.position(0, 0);
   sfondo.style('z-index', 8);
@@ -886,7 +890,6 @@ function draw() {
   }
 
   //home behaviour
-  cartaHome.mousePressed(openpoem);
   playbutt.mousePressed(openpoem);
   playbutt.mouseOver(paperanimin);
   playbutt.mouseOut(paperanimout);
@@ -1038,19 +1041,19 @@ function erasePoem() {
   document.getElementById('text_17e').innerHTML = "";
 
   vidVeglia1.time(0);
-  // vidVeglia2.time(0);
-  // vidVeglia3.time(0);
-  // vidVeglia4.time(0);
-  // vidVeglia5.time(0);
+  vidVeglia2.time(0);
+  vidVeglia3.time(0);
+  vidVeglia4.time(0);
+  vidVeglia5.time(0);
 
   vidFratelli1.time(0);
-  // vidFratelli2.time(0);
-  // vidFratelli3.time(0);
+  vidFratelli2.time(0);
+  vidFratelli3.time(0);
 
   vidSmcarso1.time(0);
-  // vidSmcarso2.time(0);
-  // vidSmcarso3.time(0);
-  // vidSmcarso4.time(0);
+  vidSmcarso2.time(0);
+  vidSmcarso3.time(0);
+  vidSmcarso4.time(0);
 
   vidSoldati.time(0);
 
