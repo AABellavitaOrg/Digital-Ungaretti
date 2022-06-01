@@ -457,7 +457,7 @@ function addveglia2() {
     document.getElementById('text_06e').innerHTML = veglia06eng;
     document.getElementById('text_07e').innerHTML = veglia07eng;
 
-    vidVeglia1.time(0);
+    // vidVeglia1.time(0);
     vidVeglia1.hide();
     vidVeglia2.show();
     vidVeglia2.play();
@@ -477,7 +477,7 @@ function addveglia3() {
     document.getElementById('text_09e').innerHTML = veglia09eng;
     document.getElementById('text_10e').innerHTML = veglia10eng;
 
-    vidVeglia2.time(0);
+    // vidVeglia2.time(0);
     vidVeglia2.hide();
     vidVeglia3.show();
     vidVeglia3.play();
@@ -496,7 +496,7 @@ function addveglia4() {
     document.getElementById('text_12e').innerHTML = veglia12eng;
     document.getElementById('text_13e').innerHTML = veglia13eng;
 
-    vidVeglia3.time(0);
+    // vidVeglia3.time(0);
     vidVeglia3.hide();
     vidVeglia4.show();
     vidVeglia4.play();
@@ -515,7 +515,7 @@ function addveglia5() {
     document.getElementById('text_16e').innerHTML = veglia16eng;
     document.getElementById('text_17e').innerHTML = veglia17eng;
 
-    vidVeglia4.time(0);
+    // vidVeglia4.time(0);
     vidVeglia4.hide();
     vidVeglia5.show();
     vidVeglia5.play();
@@ -527,7 +527,7 @@ function addveglia5() {
 function addveglia6() {
   erasePoem();
   veglia5status = false;
-  vidVeglia5.time(0);
+  // vidVeglia5.time(0);
   vidVeglia5.hide();
 }
 
@@ -560,7 +560,7 @@ function addfratelli2() {
     document.getElementById('text_07e').innerHTML = fratelli07eng;
     document.getElementById('text_09e').innerHTML = fratelli09eng;
     //
-    vidFratelli1.time(0);
+    // vidFratelli1.time(0);
     vidFratelli1.hide();
     vidFratelli2.show();
     vidFratelli2.play();
@@ -581,7 +581,7 @@ function addfratelli3() {
     document.getElementById('text_12e').innerHTML = fratelli12eng;
     document.getElementById('text_14e').innerHTML = fratelli14eng;
     //
-    vidFratelli2.time(0);
+    // vidFratelli2.time(0);
     vidFratelli2.hide();
     vidFratelli3.show();
     vidFratelli3.play();
@@ -593,7 +593,7 @@ function addfratelli3() {
 function addfratelli4() {
   erasePoem();
   fratelli3status = false;
-  vidFratelli3.time(0);
+  // vidFratelli3.time(0);
   vidFratelli3.hide();
 }
 
@@ -632,7 +632,7 @@ function addsmcarso2() {
     document.getElementById('text_08e').innerHTML = smcarso08eng;
     document.getElementById('text_09e').innerHTML = smcarso09eng;
 
-    vidSmcarso1.time(0);
+    // vidSmcarso1.time(0);
     vidSmcarso1.hide();
     vidSmcarso2.show();
     vidSmcarso2.play();
@@ -650,7 +650,7 @@ function addsmcarso3() {
     document.getElementById('text_11e').innerHTML = smcarso11eng;
     document.getElementById('text_12e').innerHTML = smcarso12eng;
 
-    vidSmcarso2.time(0);
+    // vidSmcarso2.time(0);
     vidSmcarso2.hide();
     vidSmcarso3.show();
     vidSmcarso3.play();
@@ -668,7 +668,7 @@ function addsmcarso4() {
     document.getElementById('text_14e').innerHTML = smcarso14eng;
     document.getElementById('text_15e').innerHTML = smcarso15eng;
 
-    vidSmcarso3.time(0);
+    // vidSmcarso3.time(0);
     vidSmcarso3.hide();
     vidSmcarso4.show();
     vidSmcarso4.play();
@@ -680,7 +680,7 @@ function addsmcarso4() {
 function addsmcarso5() {
   erasePoem();
   smcarso4status = false;
-  vidSmcarso4.time(0);
+  // vidSmcarso4.time(0);
   vidSmcarso4.hide();
 }
 
@@ -737,7 +737,7 @@ function addsoldati4() {
 function addsoldati5() {
   erasePoem();
   soldati4status = false;
-  vidSoldati.time(0);
+  // vidSoldati.time(0);
   vidSoldati.hide();
 }
 
@@ -882,12 +882,12 @@ function draw() {
   }
 
 
-  //click screen
-  if (vidVeglia1.time() / vidVeglia1.duration() == 1 || vidVeglia2.time() / vidVeglia2.duration() == 1 || vidVeglia3.time() / vidVeglia3.duration() == 1 || vidVeglia4.time() / vidVeglia4.duration() == 1 || vidVeglia5.time() / vidVeglia5.duration() == 1) {
-    text_click.show();
-  } else if (vidVeglia1.time() / vidVeglia1.duration() != 1 || vidVeglia2.time() / vidVeglia2.duration() != 1 || vidVeglia3.time() / vidVeglia3.duration() != 1 || vidVeglia4.time() / vidVeglia4.duration() != 1 || vidVeglia5.time() / vidVeglia5.duration() != 1) {
-    text_click.hide();
-  }
+  // click screen
+  // if (vidVeglia1.time() / vidVeglia1.duration() == 1 || vidVeglia2.time() / vidVeglia2.duration() == 1 || vidVeglia3.time() / vidVeglia3.duration() == 1 || vidVeglia4.time() / vidVeglia4.duration() == 1 || vidVeglia5.time() / vidVeglia5.duration() == 1) {
+  //   text_click.show();
+  // } else if (vidVeglia1.time() / vidVeglia1.duration() != 1 || vidVeglia2.time() / vidVeglia2.duration() != 1 || vidVeglia3.time() / vidVeglia3.duration() != 1 || vidVeglia4.time() / vidVeglia4.duration() != 1 || vidVeglia5.time() / vidVeglia5.duration() != 1) {
+  //   text_click.hide();
+  // }
 
   //home behaviour
   playbutt.mousePressed(openpoem);
@@ -905,6 +905,7 @@ function draw() {
     homeinposition = true;
     veglia1status = false;
     addveglia1();
+    text_click.show();
   }
 
   if (xcarta < -800 && overcarta == true && cartalimite == false && homestatus == true) {
@@ -1077,9 +1078,7 @@ function switchToVeglia() {
     vidFratelli1.hide();
     vidFratelli2.hide();
     vidFratelli3.hide();
-  }
-
-  if (smcarso == true) {
+  } else if (smcarso == true) {
     smcarso = false;
     smcarso1status = false;
     smcarso2status = false;
@@ -1095,9 +1094,7 @@ function switchToVeglia() {
     vidSmcarso2.hide();
     vidSmcarso3.hide();
     vidSmcarso4.hide();
-  }
-
-  if (soldati == true) {
+  } else if (soldati == true) {
     soldati = false;
     soldati1status = false;
     soldati2status = false;
@@ -1123,6 +1120,7 @@ function switchToFratelli() {
     veglia4status = false;
     veglia5status = false;
 
+    vidVeglia1.time(0);
     vidVeglia2.time(0);
     vidVeglia3.time(0);
     vidVeglia4.time(0);
@@ -1179,6 +1177,7 @@ function switchToSmcarso() {
     veglia4status = false;
     veglia5status = false;
 
+    vidVeglia1.time(0);
     vidVeglia2.time(0);
     vidVeglia3.time(0);
     vidVeglia4.time(0);
@@ -1232,6 +1231,7 @@ function switchToSoldati() {
     veglia4status = false;
     veglia5status = false;
 
+    vidVeglia1.time(0);
     vidVeglia2.time(0);
     vidVeglia3.time(0);
     vidVeglia4.time(0);
@@ -1292,6 +1292,7 @@ function closepoem() {
   homestatus = true;
   resetpaper = true;
   sfondoHome.show();
+  text_click.hide();
   cartaHome.style('z-index', 21);
 }
 
